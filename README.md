@@ -1,10 +1,7 @@
 # 📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
 
-**👤 Autor:** Nicolás Barrios  
-**💼 Perfil:** Ingeniero Biomédico | Data Analyst / BI Analyst  
-**🛠️ Herramientas:** Power BI · Power Query · DAX · Modelado Dimensional (Kimball)
-
----
+👇👇👇 **LINK DIRECTO AL DASHBOARD (Power BI Service): 👇👇👇**
+https://app.powerbi.com/view?r=eyJrIjoiM2Q2MDczZGUtYWU4YS00MTQ1LTgyMjEtZTc2ZGYyZDZhNWM2IiwidCI6ImI0OWRiNjI0LTI1NDYtNDI1OS1iZjM2LTE5OWM2ZTk4ODAzMyIsImMiOjR9
 
 ## 📌 Descripción General
 
@@ -12,12 +9,10 @@ Este proyecto desarrolla una solución integral de **Business Intelligence en Po
 
 Se implementó un modelo dimensional basado en **Star Schema (metodología Kimball)**, garantizando:
 
-- ✔️ Alto rendimiento en consultas  
-- ✔️ Escalabilidad del modelo  
-- ✔️ Claridad analítica  
-- ✔️ Confiabilidad en los KPIs  
-
-El dashboard permite monitorear tendencias, identificar oportunidades de crecimiento y respaldar la toma de decisiones basadas en datos.
+✔️ Alto rendimiento en consultas  
+✔️ Escalabilidad del modelo  
+✔️ Claridad analítica  
+✔️ Confiabilidad en los KPIs  
 
 ---
 
@@ -50,12 +45,12 @@ Este dashboard permite:
 
 El proceso ETL se realizó en **Power Query** e incluyó:
 
-- ✔️ Normalización de formato regional  
-- ✔️ Normalización de texto  
-- ✔️ Integridad geográfica  
-- ✔️ Eliminación de duplicados  
-- ✔️ Generación de surrogate keys mediante índices  
-- ✔️ Integración con FactSales mediante procesos de merge  
+✔️ Corrección de formatos numéricos y monetarios por configuración regional
+✔️ Limpieza y estandarización de campos de texto para evitar inconsistencias
+✔️ Depuración de datos geográficos (ciudad–estado) para asegurar unicidad
+✔️ Identificación y eliminación de registros duplicados
+✔️ Generación de surrogate keys para garantizar integridad dimensional
+✔️ Integración de dimensiones con FactSales mediante merges validados
 
 ---
 
@@ -122,13 +117,13 @@ La navegación se gestiona mediante:
 
 ## 🚀 Habilidades Demostradas
 
-- ✔️ Modelado Dimensional (Star Schema)  
-- ✔️ ETL en Power Query  
-- ✔️ Limpieza de Datos  
-- ✔️ Análisis Temporal  
-- ✔️ Visualización Ejecutiva  
-- ✔️ Data Storytelling  
-- ✔️ Optimización de Rendimiento  
+✔️ Modelado dimensional bajo esquema estrella (Star Schema)
+✔️ Procesos ETL en Power Query (extracción, transformación y carga)
+✔️ Limpieza y estandarización avanzada de datos
+✔️ Desarrollo de métricas y KPIs en DAX (time intelligence, acumulados, variaciones)
+✔️ Análisis temporal con tablas calendario y funciones DAX
+✔️ Diseño de dashboards ejecutivos orientados a toma de decisiones
+✔️ Optimización del rendimiento mediante modelado, DAX eficiente y reducción de cardinalidad
 
 ---
 
