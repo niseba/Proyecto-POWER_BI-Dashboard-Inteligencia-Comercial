@@ -1,142 +1,135 @@
-📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
+# 📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
 
-👤 Autor: Nicolás Barrios
-💼 Perfil: Ingeniero Biomédico | Data Analyst / BI Analyst
-🛠️ Herramientas: Power BI · Power Query · DAX · Modelado Dimensional (Kimball)
+**👤 Autor:** Nicolás Barrios  
+**💼 Perfil:** Ingeniero Biomédico | Data Analyst / BI Analyst  
+**🛠️ Herramientas:** Power BI · Power Query · DAX · Modelado Dimensional (Kimball)
 
-📌 Descripción General
+---
 
-Este proyecto desarrolla una solución integral de Business Intelligence en Power BI para analizar el desempeño comercial, la rentabilidad y la eficiencia operativa a partir de datos transaccionales de ventas.
+## 📌 Descripción General
 
-Se implementó un modelo dimensional basado en Star Schema (metodología Kimball), garantizando:
+Este proyecto desarrolla una solución integral de **Business Intelligence en Power BI** para analizar el desempeño comercial, la rentabilidad y la eficiencia operativa a partir de datos transaccionales de ventas.
 
-✔️ Alto rendimiento en consultas
-✔️ Escalabilidad del modelo
-✔️ Claridad analítica
-✔️ Confiabilidad en los KPIs
+Se implementó un modelo dimensional basado en **Star Schema (metodología Kimball)**, garantizando:
+
+- ✔️ Alto rendimiento en consultas  
+- ✔️ Escalabilidad del modelo  
+- ✔️ Claridad analítica  
+- ✔️ Confiabilidad en los KPIs  
 
 El dashboard permite monitorear tendencias, identificar oportunidades de crecimiento y respaldar la toma de decisiones basadas en datos.
 
-🎯 Valor para el Negocio:
+---
 
-📈 Identificar productos, regiones y segmentos de mayor y menor desempeño
+## 🎯 Valor para el Negocio
 
-💰 Analizar tendencias de ingresos, utilidad y margen
+Este dashboard permite:
 
-🚚 Evaluar eficiencia logística
+- 📈 Identificar productos, regiones y segmentos de mayor y menor desempeño  
+- 💰 Analizar tendencias de ingresos, utilidad y margen  
+- 🚚 Evaluar eficiencia logística  
+- 📊 Monitorear crecimiento interanual  
+- 🧭 Apoyar procesos de planeación estratégica y forecasting  
 
-📊 Monitorear crecimiento interanual
+---
 
-🧭 Apoyar procesos de planeación estratégica y forecasting
+## 📂 Dataset
 
+- **📍 Fuente:** Dataset público de ventas de una multinacional tecnológica  
+- **📍 Granularidad:** Línea de orden de venta  
 
-📂 Dataset
+### Variables principales
 
-📍 Fuente: Dataset público de ventas de una multinacional tecnológica.
-📍 Granularidad: Línea de orden de venta
+- Sales, Profit, Quantity, Discount  
+- Order Date, Ship Date  
+- Customer, Product, Geography, Ship Mode  
 
-Variables principales:
+---
 
-Sales, Profit, Quantity, Discount
+## 🧹 Limpieza y Preparación de Datos (ETL)
 
-Order Date, Ship Date
+El proceso ETL se realizó en **Power Query** e incluyó:
 
-Customer, Product, Geography, Ship Mode
+- ✔️ Normalización de formato regional  
+- ✔️ Normalización de texto  
+- ✔️ Integridad geográfica  
+- ✔️ Eliminación de duplicados  
+- ✔️ Generación de surrogate keys mediante índices  
+- ✔️ Integración con FactSales mediante procesos de merge  
 
-🧹 Limpieza y Preparación de Datos (ETL)
+---
 
-El proceso ETL se realizó en Power Query e incluyó:
-
-✔️ Normalización de formato regional
-✔️ Normalización de texto
-✔️ Integridad geográfica
-✔️ Eliminación de duplicados
-✔️ Generación de surrogate keys mediante índices
-✔️ Integración con FactSales mediante procesos de merge
-
-🧩 Arquitectura del Modelo de Datos
+## 🧩 Arquitectura del Modelo de Datos
 
 Se implementó un esquema en estrella con la siguiente estructura:
 
-📍 Tabla de Hechos 
+### 📍 Tabla de Hechos
 
-1) FactSales: Sales, Profit, Quantity, Discount, 
-Order Date, Ship Date,CustomerKey, ProductKey, 
-GeographyKey, ShipModeKey
+**FactSales**
 
-📍 Tablas Dimensión
+- Sales, Profit, Quantity, Discount  
+- Order Date, Ship Date  
+- CustomerKey, ProductKey, GeographyKey, ShipModeKey  
 
-1) DimCustomer: Cliente y Segmento
+### 📍 Tablas Dimensión
 
-2) DimProduct: Producto, Categoría y Subcategoría
+- **DimCustomer:** Cliente y Segmento  
+- **DimProduct:** Producto, Categoría y Subcategoría  
+- **DimGeography:** País, Estado, Ciudad, Región  
+- **DimShipMode:** Tipo de Envío  
+- **DimDate:** Construcción dinámica mediante DAX (CALENDAR) basada en rango real de datos  
 
-3) DimGeography: País, Estado, Ciudad, Región
+---
 
-4) DimShipMode: Tipo de Envío
+### ⚙️ Decisiones de Modelado
 
-5) DimDate: Construcción dinámica mediante DAX (CALENDAR) basada en rango real de datos.
+- Integración de Categoría y Subcategoría en DimProduct (evitando Snowflake)  
+- Implementación de surrogate keys en todas las dimensiones  
+- Definición de granularidad a nivel de línea de venta  
+- Relaciones 1:* con filtrado unidireccional  
 
+---
 
-⚙️ Decisiones de Modelado
-
-- Integración de Categoría y Subcategoría en DimProduct (evitando Snowflake)
-
-- Implementación de surrogate keys en todas las dimensiones
-
-- Definición de granularidad a nivel de línea de venta
-
-- Relaciones 1:* con filtrado unidireccional
-
-📈 Diseño del Dashboard y Navegación
+## 📈 Diseño del Dashboard y Navegación
 
 La navegación se gestiona mediante:
 
-🔖 Bookmarks
+- 🔖 Bookmarks  
+- 🔘 Botones interactivos  
+- 🔄 Reset de filtros  
 
-🔘 Botones interactivos
+### 📊 Secciones Principales
 
-🔄 Reset de filtros
+- Overview  
+- Segmentación  
+- Análisis Regional  
+- Análisis de Producto  
+- Product Insights  
+- Forecasting  
+- Actual vs Año Anterior  
+- Análisis Semanal  
 
+---
 
-📊 Secciones Principales del Dashboard
+## 🧠 Retos Técnicos y Soluciones
 
-- Overview
+- 🔹 **Formato incorrecto de datos** → Configuración regional  
+- 🔹 **Falta de claves geográficas** → Implementación de surrogate keys  
+- 🔹 **Diseño jerárquico** → Integración en dimensiones  
+- 🔹 **Navegación compleja** → Uso de Bookmarks  
 
-- Segmentación
+---
 
-- Análisis Regional
+## 🚀 Habilidades Demostradas
 
-- Análisis de Producto
+- ✔️ Modelado Dimensional (Star Schema)  
+- ✔️ ETL en Power Query  
+- ✔️ Limpieza de Datos  
+- ✔️ Análisis Temporal  
+- ✔️ Visualización Ejecutiva  
+- ✔️ Data Storytelling  
+- ✔️ Optimización de Rendimiento  
 
-- Product Insights
+---
 
-- Forecasting
-
-- Actual vs Año Anterior
-
-- Análisis Semanal
-
-
-🧠 Retos Técnicos y Soluciones
-
-🔹 Formato incorrecto de datos
-→ Configuración regional
-
-🔹 Falta de claves geográficas
-→ Implementación de surrogate keys
-
-🔹 Diseño jerárquico
-→ Integración en dimensiones
-
-🔹 Navegación compleja
-→ Uso de Bookmarks
-
-🚀 Habilidades Demostradas
-
-✔️ Modelado Dimensional (Star Schema)
-✔️ ETL en Power Query
-✔️ Limpieza de Datos
-✔️ Análisis Temporal
-✔️ Visualización Ejecutiva
-✔️ Data Storytelling
-✔️ Optimización de Rendimiento
+> 🎯 **Nota:** Este proyecto fue desarrollado con enfoque en escenarios empresariales reales y mejores prácticas de Business Intelligence.
