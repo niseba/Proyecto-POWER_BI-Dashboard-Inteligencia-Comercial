@@ -49,9 +49,13 @@ El proceso ETL se realizó en **Power Query** e incluyó:
 ✔️ Corrección de formatos numéricos y monetarios por configuración regional
 
 ✔️ Limpieza y estandarización de campos de texto para evitar inconsistencias
+
 ✔️ Depuración de datos geográficos (ciudad–estado) para asegurar unicidad
+
 ✔️ Identificación y eliminación de registros duplicados
+
 ✔️ Generación de surrogate keys para garantizar integridad dimensional
+
 ✔️ Integración de dimensiones con FactSales mediante merges validados
 
 ---
@@ -91,9 +95,9 @@ Se implementó un esquema en estrella con la siguiente estructura:
 
 La navegación se gestiona mediante:
 
-- 🔖 Bookmarks  
-- 🔘 Botones interactivos  
-- 🔄 Reset de filtros  
+  🔖 Bookmarks  
+  🔘 Botones interactivos  
+  🔄 Reset de filtros  
 
 ### 📊 Secciones Principales
 
@@ -110,23 +114,28 @@ La navegación se gestiona mediante:
 
 ## 🧠 Retos Técnicos y Soluciones
 
-- 🔹 **Formato incorrecto de datos** → Configuración regional  
-- 🔹 **Falta de claves geográficas** → Implementación de surrogate keys  
-- 🔹 **Diseño jerárquico** → Integración en dimensiones  
-- 🔹 **Navegación compleja** → Uso de Bookmarks  
+🔹 Formato incorrecto de datos monetarios → Ajuste de configuración regional
+
+🔹 Ausencia de claves geográficas → Diseño e implementación de surrogate keys
+
+🔹 Definición de jerarquías y granularidad → Integración en dimensiones
+
+🔹 Cálculo correcto de porcentajes dinámicos → Gestión avanzada del filter context con ALLSELECTED
+
+🔹 Navegación compleja → Implementación de bookmarks y control de estados 
 
 ---
 
 ## 🚀 Habilidades Demostradas
 
 ✔️ Modelado dimensional bajo esquema estrella (Star Schema)
-
-✔️ Procesos ETL en Power Query (extracción, transformación y carga)
+✔️ Procesos ETL completos en Power Query
 ✔️ Limpieza y estandarización avanzada de datos
-✔️ Desarrollo de métricas y KPIs en DAX (time intelligence, acumulados, variaciones)
-✔️ Análisis temporal con tablas calendario y funciones DAX
+✔️ Desarrollo de métricas y KPIs en DAX (Time Intelligence, YoY, acumulados, variaciones)
+✔️ Gestión avanzada de contextos de filtro en DAX
+✔️ Análisis temporal mediante tablas calendario
 ✔️ Diseño de dashboards ejecutivos orientados a toma de decisiones
-✔️ Optimización del rendimiento mediante modelado, DAX eficiente y reducción de cardinalidad
+✔️ Optimización de rendimiento mediante reducción de cardinalidad y buenas prácticas de modelado
 
 ---
 
