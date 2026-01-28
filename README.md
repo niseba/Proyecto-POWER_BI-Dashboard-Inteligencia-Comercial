@@ -1,6 +1,7 @@
 # 📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
 
 👇👇👇 **LINK DIRECTO AL DASHBOARD (Power BI Service): 👇👇👇**
+
 https://app.powerbi.com/view?r=eyJrIjoiM2Q2MDczZGUtYWU4YS00MTQ1LTgyMjEtZTc2ZGYyZDZhNWM2IiwidCI6ImI0OWRiNjI0LTI1NDYtNDI1OS1iZjM2LTE5OWM2ZTk4ODAzMyIsImMiOjR9
 
 ## 📌 Descripción General
@@ -46,6 +47,7 @@ Este dashboard permite:
 El proceso ETL se realizó en **Power Query** e incluyó:
 
 ✔️ Corrección de formatos numéricos y monetarios por configuración regional
+
 ✔️ Limpieza y estandarización de campos de texto para evitar inconsistencias
 ✔️ Depuración de datos geográficos (ciudad–estado) para asegurar unicidad
 ✔️ Identificación y eliminación de registros duplicados
@@ -118,6 +120,7 @@ La navegación se gestiona mediante:
 ## 🚀 Habilidades Demostradas
 
 ✔️ Modelado dimensional bajo esquema estrella (Star Schema)
+
 ✔️ Procesos ETL en Power Query (extracción, transformación y carga)
 ✔️ Limpieza y estandarización avanzada de datos
 ✔️ Desarrollo de métricas y KPIs en DAX (time intelligence, acumulados, variaciones)
