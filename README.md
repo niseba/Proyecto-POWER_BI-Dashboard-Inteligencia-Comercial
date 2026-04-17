@@ -1,6 +1,6 @@
 # 📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
 
-![test](./Screenshot_Dashboard.png)
+![PowerBI Dashboard]![test](./dash.png)
 
 ## 📌 Descripción General
 
