@@ -1,8 +1,6 @@
 # 📊 Dashboard de Análisis de Ventas y Rentabilidad – Power BI
 
-👇👇👇 **LINK DIRECTO AL DASHBOARD (Power BI Service): 👇👇👇**
-
-https://app.powerbi.com/view?r=eyJrIjoiM2Q2MDczZGUtYWU4YS00MTQ1LTgyMjEtZTc2ZGYyZDZhNWM2IiwidCI6ImI0OWRiNjI0LTI1NDYtNDI1OS1iZjM2LTE5OWM2ZTk4ODAzMyIsImMiOjR9
+![Power BI Dashboard](Screenshot_Dashboard.png)
 
 ## 📌 Descripción General
 
